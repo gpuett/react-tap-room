@@ -67,6 +67,7 @@ function TapList() {
           }
           .add:hover {
             background-color: #E0A800;
+            cursor: pointer;
           }
         `}
       </style>

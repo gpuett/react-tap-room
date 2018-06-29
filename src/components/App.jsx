@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import TapList from './TapList';
 import Header from './Header';
+import NewTapForm from './NewTapForm';
 
 function App(){
   return (
@@ -25,6 +26,7 @@ function App(){
         <Header/>
         <Switch>
           <Route exact path='/' component={TapList} />
+          <Route path="/NewKeg" component={NewTapForm}/>
           <Route component={Error404} />
         </Switch>
       </div>

@@ -53,7 +53,7 @@ function TapList() {
             text-align: center;
             margin: 0 auto;
             position: relative;
-            width: 75%;
+            width: 60%;
           }
           .loop {
             border-bottom: 2px solid black;

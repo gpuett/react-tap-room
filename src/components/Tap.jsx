@@ -16,19 +16,20 @@ function Tap(props){
           img {
             padding: 10px;
             border-radius: 15px;
-            width: 270px;
+            width: 340px;
+            margin-left: 10px;
           }
           .imageDiv {
-            width: 340px;
+            width: 380px;
           }
           .imageDiv h1 h3{
             font-weight: 500;
           }
           .kegDiv {
-            width: 340px;
+            width: 380px;
           }
           .formDiv {
-            width: 340px;
+            width: 380px;
           }
           .sell {
             background-color: #17A2B8;

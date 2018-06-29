@@ -35,6 +35,9 @@ function Tap(props){
             border: none;
             margin: 10px;
           }
+          .sell:hover {
+            background-color: #138496;
+          }
           .edit {
             background-color: #DC3545;
             padding: 10px;
@@ -42,6 +45,9 @@ function Tap(props){
             color: white;
             border: none;
             margin: 10px;
+          }
+          .edit:hover {
+            background-color: #C82333;
           }
         `}
       </style>

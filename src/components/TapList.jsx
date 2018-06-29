@@ -62,8 +62,15 @@ function TapList() {
             border: none;
             margin: 10px;
           }
+          .add:hover {
+            background-color: #E0A800;
+          }
         `}
       </style>
+      <select name="taps">
+        <option value="All Taps"></option>
+        <option value="ABV Over 6%"></option>
+      </select>
       {masterKegList.map((tap, index) =>
         <div className='loop'>
           <Tap name={tap.name}

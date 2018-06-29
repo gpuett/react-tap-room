@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import TapList from './TapList';
 import Header from './Header';
-import Moon from './../assets/images/blood-moon.jpg';
 
 function App(){
   return (
@@ -11,7 +10,7 @@ function App(){
       <style global jsx>
         {`
           body {
-            background-image: url('https://i.imgur.com/8FrbFiR.jpg');
+            background-image: url('https://tinyurl.com/y7nqhtpk');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: black;

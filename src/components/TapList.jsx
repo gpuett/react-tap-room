@@ -45,15 +45,28 @@ const masterKegList = [
 
 function TapList() {
   return(
-    <div>
+    <div className='notLoop'>
+      <style jsx>
+        {`
+          .notLoop {
+            max-width: 1024px;
+            align-items: center;
+          }
+          .loop {
+            border-bottom: 1px solid black;
+          }
+        `}
+      </style>
       {masterKegList.map((tap, index) =>
-        <Tap name={tap.name}
-          brewer={tap.brewer}
-          abv={tap.abv}
-          price={tap.price}
-          image={tap.image}
-          remaining={tap.remaining}
-          key={index}/>
+        <div className='loop'>
+          <Tap name={tap.name}
+            brewer={tap.brewer}
+            abv={tap.abv}
+            price={tap.price}
+            image={tap.image}
+            remaining={tap.remaining}
+            key={index}/>
+        </div>
       )}
     </div>
   );

@@ -8,7 +8,14 @@ function Tap(props){
         {`
           .tapCard{
             display: flex;
-            background-color: green;
+            background-color: lightgreen;
+            color: black;
+            text-align: center;
+          }
+          img {
+            padding: 10px;
+            border-radius: 15px;
+            width: 300px;
           }
         `}
       </style>
@@ -26,7 +33,7 @@ function Tap(props){
         <button>Edit</button>
       </div>
       <div></div>
-      
+
     </div>
   );
 }

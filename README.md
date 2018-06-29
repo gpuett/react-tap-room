@@ -24,6 +24,11 @@ Angular's built in dependencies make it a great resource to create a project and
 ### Component Structure
 ![Web-view components](./src/assets/images/components.png)
 
+### Notes
+* The last project I had to style was made with bootstrap, so recreating some of the standard styles without that crutch was a bit of a challenge.
+* I ultimately decided to add a new route to the new keg form, I think it looks a lot cleaner and allows me to utilize React Routing
+* I plan to implement the NewTapControl next week after studying state
+* I have not implemented the edit keg form/feature as it will require state as well
 
 ### License
 *MIT License*

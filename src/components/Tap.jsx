@@ -30,6 +30,8 @@ function Tap(props){
           }
           .formDiv {
             width: 380px;
+            display: flex;
+            align-items: center;
           }
           .sell {
             background-color: #17A2B8;
@@ -73,7 +75,7 @@ function Tap(props){
         <button className="edit">Edit</button>
       </div>
       <div className="formDiv">
-
+        <p>Edit form to go here on click</p>
       </div>
 
     </div>

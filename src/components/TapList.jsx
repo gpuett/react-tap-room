@@ -51,8 +51,9 @@ function TapList() {
           .notLoop {
             width: 1024px;
             text-align: center;
-            margin: auto;
-            position: absolute;
+            margin: 0 auto;
+            position: relative;
+            width: 50%;
           }
           .loop {
             border-bottom: 2px solid black;

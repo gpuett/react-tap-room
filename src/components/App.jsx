@@ -17,7 +17,7 @@ function App(){
             color: white;
             align-items: center;
             margin: auto;
-            width: 50%;
+          
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           }
         `}

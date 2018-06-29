@@ -10,12 +10,12 @@ function Header(){
           }
           .headerStyle h1 {
             font-size: 40px;
-            line-height: 10px;
+            line-height: 40px;
             font-weight: 500;
           }
           .headerStyle h2 {
             font-size: 28px;
-            line-height: 10px;
+            line-height: 30px;
             font-weight: 500;
           }
         `}

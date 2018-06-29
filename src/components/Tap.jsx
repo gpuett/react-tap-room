@@ -21,6 +21,9 @@ function Tap(props){
           .imageDiv {
             width: 340px;
           }
+          .imageDiv h1 h3{
+            font-weight: 500;
+          }
           .kegDiv {
             width: 340px;
           }

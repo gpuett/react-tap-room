@@ -26,7 +26,7 @@ function App(){
         <Header/>
         <Switch>
           <Route exact path='/' component={TapList} />
-          <Route path="/NewKeg" component={NewTapForm}/>
+          <Route path="/newKeg" component={NewTapForm}/>
           <Route component={Error404} />
         </Switch>
       </div>

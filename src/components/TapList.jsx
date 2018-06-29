@@ -4,6 +4,7 @@ import Huntsman from './../assets/images/huntsman.jpg';
 import SilverLady from './../assets/images/silver-lady.jpg';
 import MadOne from './../assets/images/madone.jpg';
 import Tap from './Tap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -63,11 +64,17 @@ function TapList() {
             padding: 10px;
             border-radius: 5px;
             border: none;
-            margin: 10px;
+            margin: 40px;
+            text-decoration: none;
+            color: black;
           }
           .add:hover {
             background-color: #E0A800;
             cursor: pointer;
+          }
+          select {
+            height: 25px;
+            font-size: 16px;
           }
         `}
       </style>
@@ -86,7 +93,8 @@ function TapList() {
             key={index}/>
         </div>
       )}
-      <button className="add">Add Keg</button>
+      <br/>
+      <Link to='/newKeg' className="add">Add Keg</Link>
     </div>
   );
 }

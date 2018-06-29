@@ -17,6 +17,7 @@ function NewTapForm() {
             border: none;
             margin: 10px;
             font-size: 16px;
+
           }
           button:hover {
             background-color: #C82333;

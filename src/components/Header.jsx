@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function Header(){
   return (
-    <div>
+    <div className="headerStyle">
       <style jsx>
         {`
-          div {
+          .headerStyle {
             text-align: center
           }
         `}

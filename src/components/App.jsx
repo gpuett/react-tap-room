@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import TapList from './TapList';
 import Header from './Header';
+import Moon from './../assets/images/blood-moon.jpg';
 
 function App(){
   return (
@@ -10,12 +11,15 @@ function App(){
       <style global jsx>
         {`
           body {
-            background-image: url(./../assets/images/blood-moon.jpg);
+            background-image: url('https://i.imgur.com/8FrbFiR.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             background-color: black;
             color: white;
             align-items: center;
             margin: auto;
             width: 50%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           }
         `}
       </style>

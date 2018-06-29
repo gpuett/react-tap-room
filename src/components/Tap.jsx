@@ -16,16 +16,16 @@ function Tap(props){
           img {
             padding: 10px;
             border-radius: 15px;
-            width: 300px;
+            width: 270px;
           }
           .imageDiv {
-            min-width: 300px;
+            width: 340px;
           }
           .kegDiv {
-            min-width: 300px;
+            width: 340px;
           }
           .formDiv {
-            width: 200px;
+            width: 340px;
           }
           .sell {
             background-color: #17A2B8;
@@ -46,7 +46,7 @@ function Tap(props){
         `}
       </style>
       <div className="imageDiv">
-        <h2>Price: ${props.price}</h2>
+        <h1>Price: ${props.price}</h1>
         <h3>Name: {props.name}</h3>
         <img src={props.image}></img>
       </div>

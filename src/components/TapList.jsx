@@ -53,7 +53,14 @@ function TapList() {
             text-align: center;
           }
           .loop {
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid black;
+          }
+          .add {
+            background-color: #FFC107;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px;
           }
         `}
       </style>
@@ -68,7 +75,7 @@ function TapList() {
             key={index}/>
         </div>
       )}
-      <button>Add Keg</button>
+      <button className="add">Add Keg</button>
     </div>
   );
 }

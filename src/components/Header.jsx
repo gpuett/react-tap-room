@@ -11,7 +11,7 @@ function Header(){
         `}
       </style>
       <h1>LoveCraft</h1>
-      <h3>Welcome to Garnett & William Taps</h3>
+      <h2>Welcome to Garnett & William Taps</h2>
     </div>
   );
 }

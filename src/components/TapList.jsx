@@ -1,45 +1,60 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Celestial from './../assets/images/Celestial.jpg';
+import Huntsman from './../assets/images/huntsman.jpg';
+import SilverLady from './../assets/images/silver-lady.jpg';
+import MadOne from './../assets/images/madone.jpg';
+import Tap from './Tap';
 
 
-const state = {
-  masterKegList: [
-    {
-      name: 'Huntsman IIPA',
-      brewer: 'Yharnam Brewing',
-      abv: '6.9%',
-      price: '5',
-      remaining: '124'
-    },
-    {
-      name: 'Cainhurst Cider',
-      brewer: 'Silver Lady Orchard',
-      abv: '5.2%',
-      price: '4',
-      remaining: '124'
-    },
-    {
-      name: 'Celestial Saisson',
-      brewer: 'Iosefka\'s Clinic',
-      abv: '4.8%',
-      price: '5',
-      remaining: '124'
-    },
-    {
-      name: 'Mod One IIPA',
-      brewer: 'Hemwick Hops',
-      abv:  '8%',
-      price: '6',
-      remaining: '124'
-    }
-  ]
-}
+
+const masterKegList = [
+  {
+    name: 'Huntsman IIPA',
+    brewer: 'Yharnam Brewing',
+    abv: '6.9%',
+    price: '5',
+    image: Huntsman,
+    remaining: '124'
+  },
+  {
+    name: 'Cainhurst Cider',
+    brewer: 'Silver Lady Orchard',
+    abv: '5.2%',
+    price: '4',
+    image: SilverLady,
+    remaining: '124'
+  },
+  {
+    name: 'Celestial Saisson',
+    brewer: 'Iosefka\'s Clinic',
+    abv: '4.8%',
+    price: '5',
+    image: Celestial,
+    remaining: '124'
+  },
+  {
+    name: 'Mad One IIPA',
+    brewer: 'Hemwick Hops',
+    abv:  '8%',
+    price: '6',
+    image: MadOne,
+    remaining: '124'
+  }
+];
+
 
 function TapList() {
   return(
     <div>
-      <p>Taplist works!</p>
-      {/* <img src={background}></img> */}
+      {masterKegList.map((tap, index) =>
+        <Tap name={tap.name}
+          brewer={tap.brewer}
+          abv={tap.abv}
+          price={tap.price}
+          image={tap.image}
+          remaining={tap.remaining}
+          key={index}/>
+      )}
     </div>
   );
 }

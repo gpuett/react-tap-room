@@ -49,8 +49,10 @@ function TapList() {
       <style jsx>
         {`
           .notLoop {
-            max-width: 1024px;
+            width: 1024px;
             text-align: center;
+            margin: auto;
+            position: absolute;
           }
           .loop {
             border-bottom: 2px solid black;
@@ -68,8 +70,8 @@ function TapList() {
         `}
       </style>
       <select name="taps">
-        <option value="All Taps"></option>
-        <option value="ABV Over 6%"></option>
+        <option value="All Taps">All Taps</option>
+        <option value="ABV Over 6%">ABV Over 6%</option>
       </select>
       {masterKegList.map((tap, index) =>
         <div className='loop'>

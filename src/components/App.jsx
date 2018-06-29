@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import TapList from './TapList';
 import Header from './Header';
-// import background from './../assets/images/blood-moon.jpg';
 
 function App(){
   return (
@@ -14,7 +13,9 @@ function App(){
             background-image: url(./../assets/images/blood-moon.jpg);
             background-color: black;
             color: white;
-
+            align-items: center;
+            margin: auto;
+            width: 50%;
           }
         `}
       </style>

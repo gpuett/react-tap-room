@@ -50,7 +50,7 @@ function TapList() {
         {`
           .notLoop {
             max-width: 1024px;
-            align-items: center;
+            text-align: center;
           }
           .loop {
             border-bottom: 1px solid black;
@@ -68,6 +68,7 @@ function TapList() {
             key={index}/>
         </div>
       )}
+      <button>Add Keg</button>
     </div>
   );
 }

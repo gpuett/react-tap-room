@@ -70,7 +70,9 @@ class App extends React.Component{
     let updatedMasterTapList = this.state.masterTapList.slice();
     for (var i = 0; i < updatedMasterTapList.length; i++) {
       if (i === selectedTap) {
-        updatedMasterTapList[selectedTap].remaining -= 1;
+        if (updatedMasterTapList[selectedTap].remaining > 0) {
+          updatedMasterTapList[selectedTap].remaining -= 1;
+        }
       }
     }
     this.setState({masterTapList: updatedMasterTapList});

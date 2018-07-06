@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
+
   function sellPint() {
     props.onSellingPint(props.tapId);
   }
-  
+
   return(
     <div className='tapCard'>
       <style jsx>{`

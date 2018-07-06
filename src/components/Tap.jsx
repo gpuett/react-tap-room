@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
+
   return(
     <div className='tapCard'>
       <style jsx>{`
           .tapCard{
             display: flex;
             background-color: grey;
-            text-shadow: 3px 3px black;
+            text-shadow: 4px 3px black;
             text-align: center;
           }
           img {
@@ -19,9 +20,6 @@ function Tap(props){
           }
           .imageDiv {
             width: 50%;
-          }
-          .imageDiv h1 h3{
-            font-weight: 500;
           }
           .kegDiv {
             width: 50%;
@@ -59,10 +57,10 @@ function Tap(props){
         <img src={props.image}></img>
       </div>
       <div className="kegDiv">
-        <h4>{props.brewer}</h4>
-        <p>{props.abv}</p>
-        <p>Pints Remaining: {props.remaining}</p>
-        <button className="sell">Sell Pint</button>
+        <h3>{props.brewer}</h3>
+        <h3>ABV: {props.abv}%</h3>
+        <h3>Pints Remaining: {props.remaining}</h3>
+        <button className="sell" onClick={props.handleSellingPint}>Sell Pint</button>
         <br></br>
         <button className="edit">Edit</button>
       </div>
@@ -76,7 +74,8 @@ Tap.propTypes = {
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired
+  remaining: PropTypes.number.isRequired,
+  handleSellingPint: PropTypes.func
 };
 
 export default Tap;

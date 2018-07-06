@@ -1,21 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function NewTapForm(props) {
   let _name = null;
   let _price = null;
-  let _brand = null;
+  let _brewer = null;
   let _abv = null;
   let _image = null;
-  let _remaining = 124;
 
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
-    props.onNewTapCreation({name: _name.value, price: _price.value, brand: _brand.value, abv: _abv.value, image: _image.value, remaining: 124});
+    props.onNewTapCreation({name: _name.value, price: _price.value, brewer: _brewer.value, abv: _abv.value, image: _image.value, remaining: 124});
     _name.value = '';
     _price.value = '';
-    _brand.value = '';
+    _brewer.value = '';
     _abv.value = '';
     _image.value = '';
   }
@@ -50,23 +48,23 @@ function NewTapForm(props) {
       <h1>Add New Keg</h1>
       <form onSubmit={handleNewTapFormSubmission}>
         <input
-          type="text" class="form-control" placeholder="Name" required
+          type="text" placeholder="Name" required
           ref={(input) => {_name = input;}}/>
         <br/>
         <input
-          type="number" class="form-control" placeholder="Price" required
+          type="number" placeholder="Price" required
           ref={(input) => {_price = input;}}/>
         <br/>
         <input
-          type="text" class="form-control" placeholder="Brand" required
-          ref={(input) => {_brand = input;}}/>
+          type="text" placeholder="Brewer" required
+          ref={(input) => {_brewer = input;}}/>
         <br/>
         <input
-          type="number" class="form-control" placeholder="ABV" required
+          type="number" placeholder="ABV" required
           ref={(input) => {_abv = input;}}/>
         <br/>
         <input
-          type="text" class="form-control" placeholder="Image"
+          type="text" placeholder="Image"
           ref={(input) => {_image = input;}}/>
         <br/>
         <button type='submit'>Submit</button>

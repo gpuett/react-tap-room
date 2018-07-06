@@ -34,7 +34,8 @@ function TapList(props) {
 }
 
 TapList.propTypes = {
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  handleSellingPint: PropTypes.func
 };
 
 export default TapList;

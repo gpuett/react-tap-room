@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
-
+  function sellPint() {
+    props.onSellingPint(props.tapId);
+  }
+  
   return(
     <div className='tapCard'>
       <style jsx>{`
@@ -47,7 +50,7 @@ function Tap(props){
         <h3>{props.brewer}</h3>
         <h3>ABV: {props.abv}%</h3>
         <h3>Pints Remaining: {props.remaining}</h3>
-        <button className="sell" onClick={props.onSellingPint(props.tapId)}>Sell Pint</button>
+        <button className="sell" onClick={sellPint}>Sell Pint</button>
       </div>
     </div>
   );
@@ -61,7 +64,8 @@ Tap.propTypes = {
   image: PropTypes.string.isRequired,
   remaining: PropTypes.number.isRequired,
   tapId: PropTypes.number.isRequired,
-  onSellingPint: PropTypes.func
+  onSellingPint: PropTypes.func,
+  selectedTap: PropTypes.string
 };
 
 export default Tap;

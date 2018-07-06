@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Celestial from './../assets/images/Celestial.jpg';
-import Huntsman from './../assets/images/huntsman.jpg';
-import SilverLady from './../assets/images/silver-lady.jpg';
-import MadOne from './../assets/images/madone.jpg';
 
 function NewTapForm(props) {
   let _name = null;

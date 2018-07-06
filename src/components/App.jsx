@@ -57,24 +57,23 @@ class App extends React.Component{
   }
 
   handleAddingNewTapToList(newTap){
-    // let newTapId = v4();
     let newMasterTapList = this.state.masterTapList.slice();
     newMasterTapList.push(newTap);
     this.setState({masterTapList: newMasterTapList});
   }
 
-  handleChangingSelectedTap(key){
-    this.setState({selectedTap: key});
+  handleChangingSelectedTap(tapId){
+    this.setState({selectedTap: tapId});
   }
 
-  handleSellingPint(tapId){
+  handleSellingPint(selectedTap){
     let updatedMasterTapList = this.state.masterTapList.slice();
-    // for (var i = 0; i < updatedMasterTapList.length; i++) {
-    //   if (i === tapId) {
-    //     updatedMasterTapList[tapId].remaining -= 1;
-    //   }
-    // }
-    // this.setState({masterTapList: updatedMasterTapList});
+    for (var i = 0; i < updatedMasterTapList.length; i++) {
+      if (i === selectedTap) {
+        updatedMasterTapList[selectedTap].remaining -= 1;
+      }
+    }
+    this.setState({masterTapList: updatedMasterTapList});
   }
 
   render(){
@@ -98,6 +97,8 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><TapList
               tapList={this.state.masterTapList}
+              onTapSelection={this.handleChangingSelectedTap}
+              selectedTap={this.state.selectedTap}
               onSellingPint={this.handleSellingPint}/>} />
             <Route path="/NewTap" render={()=> <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList}/>} />

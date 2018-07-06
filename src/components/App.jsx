@@ -68,7 +68,9 @@ class App extends React.Component{
     this.setState({masterTapList: newMasterTapList});
   }
 
-
+  handleChangingSelectedTap(tapId){
+    this.setState({selectedTap: tapId});
+  }
   render(){
     return (
       <div>
@@ -88,8 +90,9 @@ class App extends React.Component{
         <div>
           <Header/>
           <Switch>
-            <Route exact path='/' component={TapList} />
-            <Route path="/NewTap" component={NewTapForm}/>
+            <Route exact path='/'
+              render={()=><TapList tapList={this.state.masterTapList}/>} />
+            <Route path="/NewTap" render={()=> <NewTapForm onNewTapCreation={this.handleAddingNewTapToList}/>} />
             <Route component={Error404} />
           </Switch>
         </div>

@@ -1,7 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function NewTapForm() {
+function NewTapForm(props) {
+  let _name = null;
+  let _price = null;
+  let _brand = null;
+  let _abv = null;
+  let _image = null;
+
+  function handleNewTapFormSubmission(event) {
+    event.preventDefault();
+    props.onNewTapCreation({name: _name.value, price: _price.value, brand: _brand.value, abv: _abv.value, image: _image.value});
+    _name.value = '';
+    _price.value = '';
+    _brand.value = '';
+    _abv.value = '';
+    _image.value = '';
+  }
   return(
     <div>
       <style jsx>
@@ -33,21 +49,37 @@ function NewTapForm() {
         `}
       </style>
       <h1>Add New Keg</h1>
-      <input type="text" class="form-control" placeholder="Name"></input>
-      <br/>
-      <input type="number" class="form-control" placeholder="Price"></input>
-      <br/>
-      <input type="text" class="form-control" placeholder="Brand"></input>
-      <br/>
-      <input type="number" class="form-control" placeholder="ABV"></input>
-      <br/>
-      <input type="text" class="form-control" placeholder="Image"></input>
-      <br/>
-      <button>Submit</button>
-      <br/>
+      <form onSubmit={handleNewTapFormSubmission}>
+        <input
+          type="text" class="form-control" placeholder="Name"
+          ref={(input) => {_name = input;}}/>
+        <br/>
+        <input
+          type="number" class="form-control" placeholder="Price"
+          ref={(input) => {_price = input;}}/>
+        <br/>
+        <input
+          type="text" class="form-control" placeholder="Brand"
+          ref={(input) => {_brand = input;}}/>
+        <br/>
+        <input
+          type="number" class="form-control" placeholder="ABV"
+          ref={(input) => {_abv = input;}}/>
+        <br/>
+        <input
+          type="text" class="form-control" placeholder="Image"
+          ref={(input) => {_image = input;}}/>
+        <br/>
+        <button type='submit'>Submit</button>
+        <br/>
+      </form>
       <Link to="/">Home</Link>
     </div>
   );
 }
+
+NewTapForm.propTypes = {
+  onNewTapCreation: PropTypes.func
+};
 
 export default NewTapForm;

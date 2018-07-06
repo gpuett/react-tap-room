@@ -1,6 +1,6 @@
 # React Tap Room
 ## Tap Room App to Display Keg Data
-### By Garnett Puett, 6/29/18
+### By Garnett Puett, 7/6/18
 
 ### Description
 Clone of Angular Project Recreated with React

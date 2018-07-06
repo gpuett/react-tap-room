@@ -19,6 +19,7 @@ function Header(){
             font-size: 40px;
             line-height: 40px;
             font-weight: 500;
+            font-family: 'Eater', cursive;
           }
           .headerStyle a {
             color: white;

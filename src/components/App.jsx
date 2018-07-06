@@ -91,7 +91,7 @@ class App extends React.Component{
             color: white;
             align-items: center;
             margin: auto;
-            font-family: 'Eater', cursive;
+            font-family: 'East Sea Dokdo', cursive;
           }
           `}</style>
         <div>

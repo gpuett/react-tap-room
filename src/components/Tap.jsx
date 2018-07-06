@@ -13,7 +13,6 @@ function Tap(props){
           .tapCard{
             display: flex;
             background-color: grey;
-            text-shadow: 4px 3px black;
             text-align: center;
           }
           img {
@@ -26,7 +25,11 @@ function Tap(props){
             width: 50%;
           }
           .kegDiv {
+            padding-top: 2vh;
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
           .sell {
             background-color: black;
@@ -36,6 +39,7 @@ function Tap(props){
             border: none;
             margin: 10px;
             font-size: 16px;
+            font-family: 'East Sea Dokdo', cursive;
           }
           .sell:hover {
             background-color: crimson;
@@ -43,11 +47,11 @@ function Tap(props){
           }
         `}</style>
       <div className="imageDiv">
-        <h1>Price: ${props.price}</h1>
-        <h3>Name: {props.name}</h3>
+        <h1>Name: {props.name}</h1>
         <img src={props.image}></img>
       </div>
       <div className="kegDiv">
+        <h1>Price: ${props.price}</h1>
         <h3>{props.brewer}</h3>
         <h3>ABV: {props.abv}%</h3>
         <h3>Pints Remaining: {props.remaining}</h3>

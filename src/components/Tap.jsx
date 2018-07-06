@@ -8,9 +8,8 @@ function Tap(props){
           .tapCard{
             display: flex;
             background-color: grey;
-            color: black;
+            text-shadow: 3px 3px black;
             text-align: center;
-            position: relative;
           }
           img {
             padding: 10px;
@@ -19,18 +18,13 @@ function Tap(props){
             margin-left: 10px;
           }
           .imageDiv {
-            width: 380px;
+            width: 50%;
           }
           .imageDiv h1 h3{
             font-weight: 500;
           }
           .kegDiv {
-            width: 380px;
-          }
-          .formDiv {
-            width: 380px;
-            display: flex;
-            align-items: center;
+            width: 50%;
           }
           .sell {
             background-color: #17A2B8;
@@ -72,10 +66,6 @@ function Tap(props){
         <br></br>
         <button className="edit">Edit</button>
       </div>
-      <div className="formDiv">
-        <p>Edit form to go here on click</p>
-      </div>
-
     </div>
   );
 }

@@ -8,10 +8,11 @@ function NewTapForm(props) {
   let _brand = null;
   let _abv = null;
   let _image = null;
+  let _remaining = 124;
 
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
-    props.onNewTapCreation({name: _name.value, price: _price.value, brand: _brand.value, abv: _abv.value, image: _image.value});
+    props.onNewTapCreation({name: _name.value, price: _price.value, brand: _brand.value, abv: _abv.value, image: _image.value, remaining: 124});
     _name.value = '';
     _price.value = '';
     _brand.value = '';
@@ -20,8 +21,7 @@ function NewTapForm(props) {
   }
   return(
     <div>
-      <style jsx>
-        {`
+      <style jsx>{`
           div {
             text-align: center;
           }
@@ -40,30 +40,29 @@ function NewTapForm(props) {
             cursor: pointer;
           }
           input {
-            height: 30px;
+            height: 40px;
             width: 300px;
           }
           a {
             color: white;
           }
-        `}
-      </style>
+        `}</style>
       <h1>Add New Keg</h1>
       <form onSubmit={handleNewTapFormSubmission}>
         <input
-          type="text" class="form-control" placeholder="Name"
+          type="text" class="form-control" placeholder="Name" required
           ref={(input) => {_name = input;}}/>
         <br/>
         <input
-          type="number" class="form-control" placeholder="Price"
+          type="number" class="form-control" placeholder="Price" required
           ref={(input) => {_price = input;}}/>
         <br/>
         <input
-          type="text" class="form-control" placeholder="Brand"
+          type="text" class="form-control" placeholder="Brand" required
           ref={(input) => {_brand = input;}}/>
         <br/>
         <input
-          type="number" class="form-control" placeholder="ABV"
+          type="number" class="form-control" placeholder="ABV" required
           ref={(input) => {_abv = input;}}/>
         <br/>
         <input
@@ -73,7 +72,6 @@ function NewTapForm(props) {
         <button type='submit'>Submit</button>
         <br/>
       </form>
-      <Link to="/">Home</Link>
     </div>
   );
 }

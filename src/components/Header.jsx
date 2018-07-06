@@ -16,14 +16,14 @@ function Header(){
             width: 100%;
           }
           .headerStyle h1 {
-            font-size: 40px;
-            line-height: 40px;
+            font-size: 4vh;
+            line-height: 4vh;
             font-weight: 500;
             font-family: 'Eater', cursive;
           }
           .headerStyle a {
             color: white;
-            font-size: 20px;
+            font-size: 2vh;
             text-decoration: none;
             padding-top: 2vh;
           }

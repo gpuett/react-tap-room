@@ -7,7 +7,6 @@ function TapList(props) {
     <div className='notLoop'>
       <style jsx>{`
           .notLoop {
-            width: 1024px;
             text-align: center;
             margin: 0 auto;
             width: 60%;

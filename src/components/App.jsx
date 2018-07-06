@@ -5,15 +5,17 @@ import TapList from './TapList';
 import Header from './Header';
 import NewTapForm from './NewTapForm';
 
+
 function App(){
   return (
     <div>
       <style global jsx>
         {`
           body {
-            background-image: url('https://tinyurl.com/y7nqhtpk');
+            background-image: url('https://images5.alphacoders.com/548/thumb-1920-548706.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-position: center; 
             background-color: black;
             color: white;
             align-items: center;
@@ -26,7 +28,7 @@ function App(){
         <Header/>
         <Switch>
           <Route exact path='/' component={TapList} />
-          <Route path="/newKeg" component={NewTapForm}/>
+          <Route path="/NewTap" component={NewTapForm}/>
           <Route component={Error404} />
         </Switch>
       </div>

@@ -8,7 +8,7 @@ function Tap(props){
         {`
           .tapCard{
             display: flex;
-            background-color: lightgreen;
+            background-color: grey;
             color: black;
             text-align: center;
             position: relative;

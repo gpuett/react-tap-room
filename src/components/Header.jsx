@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(){
   return (
@@ -12,16 +13,28 @@ function Header(){
             font-size: 40px;
             line-height: 40px;
             font-weight: 500;
+            font-family: 'Eater', cursive;
           }
-          .headerStyle h2 {
-            font-size: 28px;
-            line-height: 30px;
-            font-weight: 500;
+          .directory {
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            height: 40px;
+            align-items: center;
+          }
+          .directory a {
+            color: white;
+            font-family: 'Eater', cursive;
+            font-size: 20px;
+            text-decoration: none;
           }
         `}
       </style>
+      <div className='directory'>
+        <Link to='/'>Home</Link>
+        <Link to='/NewTap'>Add Keg</Link>
+      </div>
       <h1>LoveCraft</h1>
-      <h2>Welcome to Garnett & William Taps!</h2>
     </div>
   );
 }

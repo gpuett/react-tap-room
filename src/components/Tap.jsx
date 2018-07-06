@@ -25,7 +25,7 @@ function Tap(props){
             width: 50%;
           }
           .sell {
-            background-color: #17A2B8;
+            background-color: black;
             padding: 10px;
             border-radius: 5px;
             color: white;
@@ -34,20 +34,7 @@ function Tap(props){
             font-size: 16px;
           }
           .sell:hover {
-            background-color: #138496;
-            cursor: pointer;
-          }
-          .edit {
-            background-color: #DC3545;
-            padding: 10px;
-            border-radius: 5px;
-            color: white;
-            border: none;
-            margin: 10px;
-            font-size: 16px;
-          }
-          .edit:hover {
-            background-color: #C82333;
+            background-color: crimson;
             cursor: pointer;
           }
         `}</style>
@@ -61,8 +48,6 @@ function Tap(props){
         <h3>ABV: {props.abv}%</h3>
         <h3>Pints Remaining: {props.remaining}</h3>
         <button className="sell" onClick={props.onSellingPint(props.tapId)}>Sell Pint</button>
-        <br></br>
-        <button className="edit">Edit</button>
       </div>
     </div>
   );

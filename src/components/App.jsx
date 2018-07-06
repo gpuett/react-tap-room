@@ -67,21 +67,20 @@ class App extends React.Component{
     this.setState({selectedTap: key});
   }
 
-  handleSellingPint(key){
-    let newMasterTapList = this.state.masterTapList.slice();
-    for (var i = 0; i < newMasterTapList.length; i++) {
-      if (i === key) {
-        newMasterTapList[key].remaining -= 1;
-      }
-      this.setState({masterTapList: newMasterTapList});
-    }
-
-
+  handleSellingPint(tapId){
+    let updatedMasterTapList = this.state.masterTapList.slice();
+    // for (var i = 0; i < updatedMasterTapList.length; i++) {
+    //   if (i === tapId) {
+    //     updatedMasterTapList[tapId].remaining -= 1;
+    //   }
+    // }
+    // this.setState({masterTapList: updatedMasterTapList});
   }
+
   render(){
     return (
       <div>
-        <style global jsx>{`
+        <style jsx global>{`
           body {
             background-image: url('https://images5.alphacoders.com/548/thumb-1920-548706.jpg');
             background-repeat: no-repeat;

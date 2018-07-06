@@ -10,8 +10,8 @@ function TapList(props) {
             width: 1024px;
             text-align: center;
             margin: 0 auto;
-            position: relative;
             width: 60%;
+            padding-top: 8vh;
           }
           .loop {
             border-bottom: 2px solid black;

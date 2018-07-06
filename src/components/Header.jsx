@@ -3,38 +3,38 @@ import { Link } from 'react-router-dom';
 
 function Header(){
   return (
-    <div className="headerStyle">
-      <style jsx>
-        {`
+    <div>
+      <style jsx>{`
           .headerStyle {
             text-align: center
+            z-index: 2;
+            position: fixed;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            height: 8vh;
+            width: 100%;
           }
           .headerStyle h1 {
             font-size: 40px;
             line-height: 40px;
             font-weight: 500;
-            font-family: 'Eater', cursive;
           }
-          .directory {
-            background-color: black;
-            display: flex;
-            justify-content: space-around;
-            height: 40px;
-            align-items: center;
-          }
-          .directory a {
+          .headerStyle a {
             color: white;
-            font-family: 'Eater', cursive;
             font-size: 20px;
             text-decoration: none;
+            padding-top: 2vh;
           }
-        `}
-      </style>
-      <div className='directory'>
+          .headerStyle a:hover {
+            color: red;
+          }
+        `}</style>
+      <div className="headerStyle">
         <Link to='/'>Home</Link>
+        <h1>LoveCraft</h1>
         <Link to='/NewTap'>Add Keg</Link>
       </div>
-      <h1>LoveCraft</h1>
     </div>
   );
 }

@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Celestial from './../assets/images/Celestial.jpg';
+import Huntsman from './../assets/images/huntsman.jpg';
+import SilverLady from './../assets/images/silver-lady.jpg';
+import MadOne from './../assets/images/madone.jpg';
 
 function NewTapForm(props) {
   let _name = null;
@@ -20,8 +24,9 @@ function NewTapForm(props) {
   return(
     <div>
       <style jsx>{`
-          div {
+          form {
             text-align: center;
+            padding-top: 8vh;
           }
           button {
             background-color: #DC3545;
@@ -31,7 +36,6 @@ function NewTapForm(props) {
             border: none;
             margin: 10px;
             font-size: 16px;
-
           }
           button:hover {
             background-color: #C82333;
@@ -39,14 +43,14 @@ function NewTapForm(props) {
           }
           input {
             height: 40px;
-            width: 300px;
+            width: 20vw;
           }
           a {
             color: white;
           }
         `}</style>
-      <h1>Add New Keg</h1>
       <form onSubmit={handleNewTapFormSubmission}>
+        <h1>Add New Keg</h1>
         <input
           type="text" placeholder="Name" required
           ref={(input) => {_name = input;}}/>

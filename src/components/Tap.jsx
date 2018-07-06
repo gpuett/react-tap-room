@@ -60,7 +60,7 @@ function Tap(props){
         <h3>{props.brewer}</h3>
         <h3>ABV: {props.abv}%</h3>
         <h3>Pints Remaining: {props.remaining}</h3>
-        <button className="sell" onClick={props.handleSellingPint}>Sell Pint</button>
+        <button className="sell" onClick={props.onSellingPint(props.tapId)}>Sell Pint</button>
         <br></br>
         <button className="edit">Edit</button>
       </div>
@@ -75,7 +75,8 @@ Tap.propTypes = {
   price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   remaining: PropTypes.number.isRequired,
-  handleSellingPint: PropTypes.func
+  tapId: PropTypes.number.isRequired,
+  onSellingPint: PropTypes.func
 };
 
 export default Tap;

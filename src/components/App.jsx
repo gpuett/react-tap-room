@@ -49,10 +49,11 @@ class App extends React.Component{
             image: MadOne,
             remaining: 124
           }
-        ],
+        ]
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
     this.handleChangingSelectedTap = this.handleAddingNewTapToList.bind(this);
+    this.handleSellingPint = this.handleSellingPint.bind(this);
   }
 
   handleAddingNewTapToList(newTap){
@@ -66,15 +67,13 @@ class App extends React.Component{
     this.setState({selectedTap: key});
   }
 
-  handleSellingPint(e){
-    e.preventDefault();
-    console.log('click');
-    let newMasterTapList = this.state.masterTapList;
-    for (var i = 0; i < this.state.masterTapList.length; i++) {
-      if (i === 1) {
-        newMasterTapList[1].remaining -= 1;
+  handleSellingPint(key){
+    let newMasterTapList = this.state.masterTapList.slice();
+    for (var i = 0; i < newMasterTapList.length; i++) {
+      if (i === key) {
+        newMasterTapList[key].remaining -= 1;
       }
-      return this.setState({masterTapList: newMasterTapList});
+      this.setState({masterTapList: newMasterTapList});
     }
 
 
@@ -100,7 +99,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><TapList
               tapList={this.state.masterTapList}
-              handleSellingPint={this.handleSellingPint}/>} />
+              onSellingPint={this.handleSellingPint}/>} />
             <Route path="/NewTap" render={()=> <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList}/>} />
             <Route component={Error404} />

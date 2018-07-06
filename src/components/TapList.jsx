@@ -17,7 +17,7 @@ function TapList(props) {
             border-bottom: 2px solid black;
           }
         `}</style>
-      {props.tapList.map((tap, index) =>
+      {props.tapList.map((tap, tapId) =>
         <div className='loop'>
           <Tap name={tap.name}
             brewer={tap.brewer}
@@ -25,7 +25,9 @@ function TapList(props) {
             price={tap.price}
             image={tap.image}
             remaining={tap.remaining}
-            key={index}/>
+            key={tapId}
+            tapId={tapId}
+            onSellingPint={props.onSellingPint}/>
         </div>
       )}
       <br/>
@@ -35,7 +37,7 @@ function TapList(props) {
 
 TapList.propTypes = {
   tapList: PropTypes.array,
-  handleSellingPint: PropTypes.func
+  onSellingPint: PropTypes.func
 };
 
 export default TapList;

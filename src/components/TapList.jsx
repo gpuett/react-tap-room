@@ -27,9 +27,7 @@ function TapList(props) {
             remaining={tap.remaining}
             key={tapId}
             tapId={tapId}
-            onSellingPint={props.onSellingPint}
-            onTapSelection={props.onTapSelection}
-            selectedTap={props.selectedTap}/>
+            onSellingPint={props.onSellingPint}/>
         </div>
       )}
       <br/>
@@ -39,9 +37,7 @@ function TapList(props) {
 
 TapList.propTypes = {
   tapList: PropTypes.array,
-  onSellingPint: PropTypes.func,
-  onTapSelection: PropTypes.func,
-  selectedTap: PropTypes.string
+  onSellingPint: PropTypes.func
 };
 
 export default TapList;

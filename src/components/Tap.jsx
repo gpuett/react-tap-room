@@ -18,7 +18,7 @@ function Tap(props){
           img {
             padding: 10px;
             border-radius: 15px;
-            width: 340px;
+            width: 75%;
             margin-left: 10px;
           }
           .imageDiv {
@@ -69,8 +69,7 @@ Tap.propTypes = {
   image: PropTypes.string.isRequired,
   remaining: PropTypes.number.isRequired,
   tapId: PropTypes.number.isRequired,
-  onSellingPint: PropTypes.func,
-  selectedTap: PropTypes.string
+  onSellingPint: PropTypes.func
 };
 
 export default Tap;

@@ -8,6 +8,8 @@ import Celestial from './../assets/images/Celestial.jpg';
 import Huntsman from './../assets/images/huntsman.jpg';
 import SilverLady from './../assets/images/silver-lady.jpg';
 import MadOne from './../assets/images/madone.jpg';
+import OldHunter from './../assets/images/oldhunter.jpg';
+import Executioner from './../assets/images/executioner.jpg';
 
 
 class App extends React.Component{
@@ -26,14 +28,6 @@ class App extends React.Component{
             remaining: 124
           },
           {
-            name: 'Cainhurst Cider',
-            brewer: 'Silver Lady Orchard',
-            abv: '5.2',
-            price: '4',
-            image: SilverLady,
-            remaining: 124
-          },
-          {
             name: 'Celestial Saisson',
             brewer: 'Iosefka\'s Clinic',
             abv: '4.8',
@@ -42,11 +36,35 @@ class App extends React.Component{
             remaining: 124
           },
           {
+            name: 'Executioner Ale',
+            brewer: 'Yharnam Brewing',
+            abv: '4.4',
+            price: '3',
+            image: Executioner,
+            remaining: 124
+          },
+          {
             name: 'Mad One IIPA',
             brewer: 'Hemwick Hops',
             abv:  '8',
             price: '6',
             image: MadOne,
+            remaining: 124
+          },
+          {
+            name: 'Cainhurst Cider',
+            brewer: 'Silver Lady Orchard',
+            abv: '5.2',
+            price: '4',
+            image: SilverLady,
+            remaining: 124
+          },
+          {
+            name: 'Old Hunter Porter',
+            brewer: 'Yharnam Brewing',
+            abv:  '5.4',
+            price: '5',
+            image: OldHunter,
             remaining: 124
           }
         ]
@@ -99,8 +117,6 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><TapList
               tapList={this.state.masterTapList}
-              onTapSelection={this.handleChangingSelectedTap}
-              selectedTap={this.state.selectedTap}
               onSellingPint={this.handleSellingPint}/>} />
             <Route path="/NewTap" render={()=> <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList}/>} />

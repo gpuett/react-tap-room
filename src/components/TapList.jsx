@@ -1,53 +1,11 @@
 import React from 'react';
-import Celestial from './../assets/images/Celestial.jpg';
-import Huntsman from './../assets/images/huntsman.jpg';
-import SilverLady from './../assets/images/silver-lady.jpg';
-import MadOne from './../assets/images/madone.jpg';
 import Tap from './Tap';
+import PropTypes from 'prop-types';
 
-
-
-const masterKegList = [
-  {
-    name: 'Huntsman IIPA',
-    brewer: 'Yharnam Brewing',
-    abv: '6.9%',
-    price: '5',
-    image: Huntsman,
-    remaining: '124'
-  },
-  {
-    name: 'Cainhurst Cider',
-    brewer: 'Silver Lady Orchard',
-    abv: '5.2%',
-    price: '4',
-    image: SilverLady,
-    remaining: '124'
-  },
-  {
-    name: 'Celestial Saisson',
-    brewer: 'Iosefka\'s Clinic',
-    abv: '4.8%',
-    price: '5',
-    image: Celestial,
-    remaining: '124'
-  },
-  {
-    name: 'Mad One IIPA',
-    brewer: 'Hemwick Hops',
-    abv:  '8%',
-    price: '6',
-    image: MadOne,
-    remaining: '124'
-  }
-];
-
-
-function TapList() {
+function TapList(props) {
   return(
     <div className='notLoop'>
-      <style jsx>
-        {`
+      <style jsx>{`
           .notLoop {
             width: 1024px;
             text-align: center;
@@ -58,9 +16,8 @@ function TapList() {
           .loop {
             border-bottom: 2px solid black;
           }
-        `}
-      </style>
-      {masterKegList.map((tap, index) =>
+        `}</style>
+      {props.tapList.map((tap, index) =>
         <div className='loop'>
           <Tap name={tap.name}
             brewer={tap.brewer}
@@ -75,5 +32,9 @@ function TapList() {
     </div>
   );
 }
+
+TapList.propTypes = {
+  tapList: PropTypes.array
+};
 
 export default TapList;

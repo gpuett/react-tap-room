@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 function Tap(props){
   return(
     <div className='tapCard'>
-      <style jsx>
-        {`
+      <style jsx>{`
           .tapCard{
             display: flex;
             background-color: grey;
@@ -59,8 +58,7 @@ function Tap(props){
             background-color: #C82333;
             cursor: pointer;
           }
-        `}
-      </style>
+        `}</style>
       <div className="imageDiv">
         <h1>Price: ${props.price}</h1>
         <h3>Name: {props.name}</h3>
